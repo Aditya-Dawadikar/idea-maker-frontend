@@ -1,38 +1,182 @@
-.App {
-  text-align: center;
+.workspace-bg {
+    width: 100%;
+    height: 100vh;
+    background-color: #c1c1c1;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.asset-container {
+    display: inline-block;
+    padding: 5px;
+    background: white;
+    border-radius: 5px;
+    -webkit-box-shadow: -1px -1px 10px 4px rgba(114, 114, 114, 0.75);
+    -moz-box-shadow: -1px -1px 10px 4px rgba(114, 114, 114, 0.75);
+    box-shadow: -1px -1px 10px 4px rgba(114, 114, 114, 0.75);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.asset-container-inner {
+    background-color: #e6e6e6;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.asset-container:hover {
+    z-index: 1000000000;
+}
+
+.asset-options {
+    position: absolute;
+    min-width: 150px;
+    font-size: 12px;
+}
+
+.asset-meta {
+    display: flex;
+}
+
+.float-right {
+    float: right
+}
+
+.icon {
+    cursor: pointer
+}
+
+.line {
+    width: 10px;
+    background-color: #c1c1c1;
+    height: 2px;
+    border-radius: 1px;
+    margin: 2px auto;
+}
+
+.node-connector {
+    position: relative;
+    left: -12px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 2px;
+}
+
+.tool-bar {
+    position: fixed;
+    margin: 5px;
+    background-color: white;
+    width: 50px;
+    z-index: 1000000000000;
+    -webkit-box-shadow: -1px -1px 10px 4px rgba(114, 114, 114, 0.75);
+    -moz-box-shadow: -1px -1px 10px 4px rgba(114, 114, 114, 0.75);
+    box-shadow: -1px -1px 10px 4px rgba(114, 114, 114, 0.75);
+}
+
+.tool-bar-full {
+    height: calc(100vh - 30px);
+    border-radius: 10px;
+}
+
+.tool-bar-collapsed {
+    height: 50px;
+    border-radius: 50%;
+}
+
+.tool-bar-collapsed:hover {
+    background-color: black;
+    color: white;
+}
+
+.tool-bar-item {
+    height: 48px;
+    margin: 1px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.tool-bar-item:hover {
+    background-color: black;
+    color: white;
+}
+
+.tool-bar-item-icon {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    left: 15px;
+    top: 15px;
+}
+
+.tool-bar-icon {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    left: 10px;
+    top: 10px;
+}
+
+.pop-up-card{
+    position: fixed;
+    top:-5px;
+    left: -5px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(41, 41, 41, 0.75);
+    z-index: 999999999999999;
+}
+
+.create-asset-card{
+    width: 800px;
+    height: 500px;
+    background-color: white;
+    z-index: 1000000000000000;
+    position: absolute;
+    left: calc(50vw - 400px);
+    top: calc(50vh - 250px);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.close-btn{
+    width: 30px;
+    height: 30px;
+}
+
+.linked-item{
+    padding: 2px;
+    border-radius: 2px;
+    -webkit-box-shadow: -1px -1px 10px 2px rgba(114, 114, 114, 0.75);
+    -moz-box-shadow: -1px -1px 2px 2px rgba(114, 114, 114, 0.75);
+    box-shadow: -1px -1px 2px 1px rgba(114, 114, 114, 0.75);
+}
+
+.linkable-items-list{
+    list-style: none;
+    padding: 5px;
+    width: 200px;
+    max-height: 100px;
+    overflow-y: scroll;
+    background-color: #e6e6e6;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
   }
-  to {
-    transform: rotate(360deg);
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background: #888;
   }
-}
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  .input-group{
+    margin-top:10px;
+  }
